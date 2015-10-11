@@ -1,7 +1,9 @@
 #!/bin/bash
 
-echo -e "Creating lambda.zip\n"
+rm -rf out/*
 mkdir out
+
+echo -e "Creating lambda.zip\n"
 zip out/lambda.zip bin/* *.rb *.py
 if [ $? -eq 0 ];
   then
